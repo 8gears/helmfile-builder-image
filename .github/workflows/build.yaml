@@ -21,7 +21,8 @@ jobs:
         name: Builder instance name
         run: |
           docker build -t 8gears/helmfile-builder-image -t c8n.io/8gears/helmfile-builder-image .
-          docker push 8gears/helmfile-builder-image c8n.io/8gears/helmfile-builder-image
+          docker push 8gears/helmfile-builder-image
+          docker push c8n.io/8gears/helmfile-builder-image
       -
         name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
