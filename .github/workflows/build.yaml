@@ -30,14 +30,3 @@ jobs:
           tags: c8n.io/8gears/helmfile-builder-image
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
-jobs:
-  login:
-    runs-on: ubuntu-latest
-    steps:
-      -
-        name: Login to GitHub Packages Docker Registry
-        uses: docker/login-action@v1
-        with:
-          registry: docker.pkg.github.com
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
