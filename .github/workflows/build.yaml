@@ -1,0 +1,27 @@
+name: build
+
+on:
+  push:
+
+jobs:
+  buildx:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: latest
+          install: true
+      -
+        name: Builder instance name
+        run: |
+          docker build -t 8gears/helmfile-builder-image -t c8n.io/8gears/helmfile-builder-image .
+          docker push 8gears/helmfile-builder-image c8n.io/8gears/helmfile-builder-image
+      -
+        name: Available platforms
+        run: echo ${{ steps.buildx.outputs.platforms }}
