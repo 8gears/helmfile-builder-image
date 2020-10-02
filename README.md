@@ -23,9 +23,11 @@ This image is rebuild nightly
 | awscli                                      | latest  |
 | gnupg, curl, gettext, jq, postgresql-client |         |
 
-## Build
+## Usage
 
-This image is rebuild nightly and can be pulled from
+This image is always up to date due to night rebuild. 
+
+Images can be pulled from two locations:
 
 ```shell script
 docker pull c8n.io/8gears/helmfile-builder-image
@@ -35,6 +37,7 @@ docker pull c8n.io/8gears/helmfile-builder-image
 docker pull 8gears/helmfile-builder-image
 ```
 
+## Sponsors
 
-
-[]: https://github.com/8gears/helmfile-builder-image/
+This project is sponsored by [container-registry.com](https://container-registry.com/), a no frills Harbor backed Managed Container Registry Service for Teams.
+[![](https://logo.clearbit.com/container-registry.com)](https://container-registry.com/)
