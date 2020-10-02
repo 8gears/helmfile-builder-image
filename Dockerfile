@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3-slim
 
 ARG HELMFILE_VERSION=0.130.1
 ARG HELM_VERSION=3.3.4

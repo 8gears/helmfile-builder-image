@@ -27,7 +27,8 @@ This image is rebuild nightly
 
 This image is always up to date due to night rebuild. 
 
-Images can be pulled from two locations:
+Images can be pulled from [Docker Hub](https://hub.docker.com) and [C8N]((https://container-registry.com/)).
+
 
 ```shell script
 docker pull c8n.io/8gears/helmfile-builder-image
@@ -36,6 +37,13 @@ docker pull c8n.io/8gears/helmfile-builder-image
 ```shell script
 docker pull 8gears/helmfile-builder-image
 ```
+
+### Tags
+
+His image has two tag types:
+ `latest` refers to a nightly build image with up to date debian and python 3.X base image.
+ `version`eg. `0.130.1` refers to the version of the Helmfile  
+
 
 ## Sponsors
 
