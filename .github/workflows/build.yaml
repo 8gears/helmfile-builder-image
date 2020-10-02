@@ -33,12 +33,12 @@ jobs:
           context: .
           push: true
           build-args: |
-            HELMFILE_VERSION: ${HELMFILE_VERSION}
+            HELMFILE_VERSION: ${{env.HELMFILE_VERSION}}
           tags: |
             8gears/helmfile-builder-image
-            8gears/helmfile-builder-image:${HELMFILE_VERSION}
+            8gears/helmfile-builder-image:${{env.HELMFILE_VERSION}}
             c8n.io/8gears/helmfile-builder-image
-            c8n.io/8gears/helmfile-builder-image:${HELMFILE_VERSION}
+            c8n.io/8gears/helmfile-builder-image:${{env.HELMFILE_VERSION}}
           labels: |
             org.opencontainers.image.title=${{ github.event.repository.name }}
             org.opencontainers.image.description=${{ github.event.repository.description }}
