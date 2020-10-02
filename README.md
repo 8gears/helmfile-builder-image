@@ -27,7 +27,7 @@ This image is rebuild nightly
 
 This image is always up to date due to night rebuild. 
 
-Images can be pulled from [Docker Hub](https://hub.docker.com) and [C8N]((https://container-registry.com/)).
+Images can be pulled from [Docker Hub](https://hub.docker.com/repository/docker/8gears/helmfile-builder-image) and [C8N](https://c8n.io/harbor/projects/9/repositories/helmfile-builder-image).
 
 
 ```shell script

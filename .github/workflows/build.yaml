@@ -27,14 +27,18 @@ jobs:
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
+        env:
+          HELMFILE_VERSION: 0.130.1
         with:
           context: .
           push: true
+          build-args: |
+            HELMFILE_VERSION: ${HELMFILE_VERSION}
           tags: |
             8gears/helmfile-builder-image
-            8gears/helmfile-builder-image:0.130.0
+            8gears/helmfile-builder-image:${HELMFILE_VERSION}
             c8n.io/8gears/helmfile-builder-image
-            c8n.io/8gears/helmfile-builder-image:0.130.0
+            c8n.io/8gears/helmfile-builder-image:${HELMFILE_VERSION}
           labels: |
             org.opencontainers.image.title=${{ github.event.repository.name }}
             org.opencontainers.image.description=${{ github.event.repository.description }}
