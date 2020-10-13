@@ -11,7 +11,7 @@ This image is rebuild nightly
 
 | Application and Helm Plugins                | Version |
 | ------------------------------------------- | ------- |
-| Helmfile                                    | 0.130.1 |
+| Helmfile                                    | 0.130.2 |
 | Kubectl                                     | 1.19.0  |
 | SOPS: Secrets OPerationS                    | 3.6.1   |
 | Helm                                        | 3.3.4   |
