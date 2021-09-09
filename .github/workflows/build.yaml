@@ -16,8 +16,8 @@ jobs:
       - name: Login to C8N
         uses: docker/login-action@v1
         with:
-          registry: c8n.io
-          username: robot$github
+          registry: 8gears.container-registry.com
+          username: robot_cicd_lib
           password: ${{ secrets.C8N_PUSH_TOKEN }}
       - name: Login to DockerHub
         uses: docker/login-action@v1
@@ -28,7 +28,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         env:
-          HELMFILE_VERSION: 0.130.1
+          HELMFILE_VERSION: 0.140.0
         with:
           context: .
           push: true
@@ -37,8 +37,8 @@ jobs:
           tags: |
             8gears/helmfile-builder-image
             8gears/helmfile-builder-image:${{env.HELMFILE_VERSION}}
-            c8n.io/8gears/helmfile-builder-image
-            c8n.io/8gears/helmfile-builder-image:${{env.HELMFILE_VERSION}}
+            8gears.container-registry.com/library/helmfile-builder-image
+            8gears.container-registry.com/library/helmfile-builder-image:${{env.HELMFILE_VERSION}}
           labels: |
             org.opencontainers.image.title=${{ github.event.repository.name }}
             org.opencontainers.image.description=${{ github.event.repository.description }}

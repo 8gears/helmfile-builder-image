@@ -11,15 +11,15 @@ This image is rebuild nightly
 
 | Application and Helm Plugins                | Version |
 | ------------------------------------------- | ------- |
-| Helmfile                                    | 0.130.1 |
+| Helmfile                                    | 0.140.0 |
 | Kubectl                                     | 1.19.0  |
-| SOPS: Secrets OPerationS                    | 3.6.1   |
-| Helm                                        | 3.3.4   |
+| SOPS: Secrets OPerationS                    | 3.7.1   |
+| Helm                                        | 3.6.3   |
 | Helm-Diff Plugin                            | 3.1.3   |
-| Helm-Secrets Plugin                         | 2.0.2   |
-| Helm-S3 Plugin                              | 2.0.2   |
-| Helm-Git Plugin                             | 0.8.1   |
-| Python  + pipenv                            | 3.8.6   |
+| Helm-Secrets Plugin                         | 3.8.3   |
+| Helm-S3 Plugin                              | 0.10.0   |
+| Helm-Git Plugin                             | 0.10.0   |
+| Python  + pipenv                            | 3.9.7   |
 | awscli                                      | latest  |
 | gnupg, curl, gettext, jq, postgresql-client |         |
 

@@ -1,13 +1,13 @@
 FROM python:3-slim
 
-ARG HELMFILE_VERSION=0.130.1
-ARG HELM_VERSION=3.3.4
+ARG HELMFILE_VERSION=0.140.0
+ARG HELM_VERSION=3.6.3
 ARG KUBECTL_VERSION=1.19.0
 ARG HELM_DIFF_VERSION=3.1.3
-ARG HELM_SECRETS_VERSION=2.0.2
-ARG HELM_S3_VERSION=0.9.2
-ARG HELM_GIT_VERSION=0.8.1
-ARG SOPS_VERSION=3.6.1
+ARG HELM_SECRETS_VERSION=3.8.3
+ARG HELM_S3_VERSION=0.10.0
+ARG HELM_GIT_VERSION=0.10.0
+ARG SOPS_VERSION=3.7.1
 
 WORKDIR /
 
@@ -36,13 +36,13 @@ RUN tar -zxvf /tmp/helm* -C /tmp \
   && rm -rf /tmp/*
 
 RUN helm plugin install https://github.com/databus23/helm-diff --version ${HELM_DIFF_VERSION} && \
-    helm plugin install https://github.com/futuresimple/helm-secrets --version ${HELM_SECRETS_VERSION} && \
+    helm plugin install https://github.com/jkroepke/helm-secrets --version ${HELM_SECRETS_VERSION} && \
     helm plugin install https://github.com/hypnoglow/helm-s3.git --version ${HELM_S3_VERSION} && \
     helm plugin install https://github.com/aslafy-z/helm-git --version ${HELM_GIT_VERSION}
 
 ADD https://github.com/roboll/helmfile/releases/download/v${HELMFILE_VERSION}/helmfile_linux_amd64 /usr/local/bin/helmfile
 RUN chmod +x /usr/local/bin/helmfile
 
-RUN pip install pipenv
+RUN pip install micropipenv[toml]
 
 ENTRYPOINT ["/bin/bash"]
