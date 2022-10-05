@@ -7,6 +7,8 @@ Source Code of this Repository is: [8gears/helmfile-builder-image](https://githu
 
 This image is rebuild nightly
 
+[![build](https://github.com/8gears/helmfile-builder-image/actions/workflows/build.yaml/badge.svg)](https://github.com/8gears/helmfile-builder-image/actions/workflows/build.yaml)
+
 ## Installed Applications
 
 | Application and Helm Plugins                | Version |
