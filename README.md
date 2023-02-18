@@ -50,4 +50,3 @@ His image has two tag types:
 ## Sponsors
 
 This project is sponsored by [container-registry.com](https://container-registry.com/), a no frills Harbor backed Managed Container Registry Service for Teams.
-[![](https://logo.clearbit.com/container-registry.com)](https://container-registry.com/)
